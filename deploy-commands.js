@@ -22,7 +22,13 @@ const commands = [
                             Option.setName('recherche')
                                 .setDescription('votre recherche')
                                 .setRequired(true)
-                                        )
+                                        ),
+                                        new SlashCommandBuilder().setName('meteo').setDescription("Envoie la météo !")
+                                        .addStringOption(Option =>
+                                            Option.setName('jour')
+                                                .setDescription('Choisissez le jour')
+                                                .setRequired(true)
+                                                        )
                         
 ]
     .map(command => command.toJSON());
