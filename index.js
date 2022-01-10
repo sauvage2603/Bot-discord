@@ -36,5 +36,7 @@ client.on("interactionCreate", (interaction) => {
         interaction.reply(`Les infos du serveur:\n🤖 Nom du serveur: ${interaction.guild.name}\n😎 Nombre de membres: ${interaction.guild.memberCount}`)
     } else if (commandName === "user") {
         interaction.reply(`Your username: ${interaction.user}\nYour ID: ${interaction.user.id}`)
+    } else if (commandName === "google"){
+        interaction.reply(`https://www.google.com/search?q=${interaction.options.getString("recherche")}`)
     }
 })

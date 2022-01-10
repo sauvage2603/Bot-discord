@@ -11,7 +11,12 @@ const commands = [
     new SlashCommandBuilder().setName('ping').setDescription('Renvoie pong!'),
     new SlashCommandBuilder().setName('server').setDescription('Renvoie les infos du serveur!'),
     new SlashCommandBuilder().setName("user").setDescription("les données de l'utilisateur."),
-
+    new SlashCommandBuilder().setName('google').setDescription("Renvoie votre recherche")
+        .addStringOption(Option =>
+            Option.setName('recherche')
+                .setDescription('votre recherche')
+                .setRequired(true)
+                        )
 ]
     .map(command => command.toJSON());
 
