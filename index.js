@@ -38,5 +38,7 @@ client.on("interactionCreate", (interaction) => {
         interaction.reply(`Your username: ${interaction.user}\nYour ID: ${interaction.user.id}`)
     } else if (commandName === "google"){
         interaction.reply(`https://www.google.com/search?q=${interaction.options.getString("recherche")}`)
+    } else if (commandName === "youtube"){
+        interaction.reply(`https://www.youtube.com/results?search_query=${interaction.options.getString("recherche")}`)
     }
 })

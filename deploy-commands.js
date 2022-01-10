@@ -16,7 +16,14 @@ const commands = [
             Option.setName('recherche')
                 .setDescription('votre recherche')
                 .setRequired(true)
-                        )
+                        ),
+                        new SlashCommandBuilder().setName('youtube').setDescription("Renvoie votre recherche")
+                        .addStringOption(Option =>
+                            Option.setName('recherche')
+                                .setDescription('votre recherche')
+                                .setRequired(true)
+                                        )
+                        
 ]
     .map(command => command.toJSON());
 
