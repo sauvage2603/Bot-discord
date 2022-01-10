@@ -17,3 +17,22 @@ const client = new Client({
 
 // // Permet de lier notre bot à notre serveur
  client.login(botToken);
+
+ // Dès qu'une interaction est créée sur le serveur
+client.on("interactionCreate", (interaction) => {
+    // On regarde si l'interaction n'est pas une commande
+    if (!interaction.isCommand()) {
+				// Si ce n'est pas le cas, on ne continue pas
+        return;
+    }
+
+    // On ne récupère que le nom de la commande sur l'interaction
+    const { commandName } = interaction;
+
+    // On répond ce que l'on veut selon le nom de la commande
+    if (commandName === "ping") {
+        interaction.reply("Pong!")
+    } else if (commandName === "server") {
+        interaction.reply(`Les infos du serveur:\n🤖 Nom du serveur: ${interaction.guild.name}\n😎 Nombre de membres: ${interaction.guild.memberCount}`)
+    }
+})

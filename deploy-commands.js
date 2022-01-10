@@ -10,7 +10,6 @@ const guildId = process.env.SERVERID;
 const commands = [
     new SlashCommandBuilder().setName('ping').setDescription('Renvoie pong!'),
     new SlashCommandBuilder().setName('server').setDescription('Renvoie les infos du serveur!'),
-    new SlashCommandBuilder().setName('user').setDescription('Renvoie les infos de l\'utilisateur!'),
 ]
     .map(command => command.toJSON());
 
