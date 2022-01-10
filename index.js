@@ -34,5 +34,7 @@ client.on("interactionCreate", (interaction) => {
         interaction.reply("Pong!")
     } else if (commandName === "server") {
         interaction.reply(`Les infos du serveur:\n🤖 Nom du serveur: ${interaction.guild.name}\n😎 Nombre de membres: ${interaction.guild.memberCount}`)
+    } else if (commandName === "user") {
+        interaction.reply(`Your username: ${interaction.user.username}\nYour ID: ${interaction.user.id}`)
     }
 })
